@@ -1,0 +1,2 @@
+# npasse
+Call passable callback.
