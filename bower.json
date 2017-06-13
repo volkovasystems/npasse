@@ -1,0 +1,54 @@
+{
+  "name": "npasse",
+  "version": "0.0.0",
+  "description": "Call passable callback.",
+  "main": "npasse.deploy.js",
+  "support": "npasse.support.js",
+  "authors": [
+    "Richeve S. Bebedor"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "call",
+    "passable",
+    "callback",
+    "npasse"
+  ],
+  "homepage": "https://github.com/volkovasystems/npasse",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "shft": "^0.2.0",
+    "zelf": "^0.12.0",
+    "protype": "^0.22.0",
+    "falzy": "^0.20.0",
+    "mrkd": "^0.6.0",
+    "doubt": "^0.27.0",
+    "arid": "^0.26.0",
+    "raze": "^0.30.0",
+    "asea": "^0.14.0",
+    "cemento": "^0.16.0",
+    "harden": "^0.22.0",
+    "aply": "^0.7.0",
+    "khount": "^0.1.0",
+    "stringe": "^0.4.0",
+    "truly": "^0.19.0",
+    "arkount": "^0.8.0",
+    "kount": "^0.11.0",
+    "wichevr": "^0.10.0"
+  },
+  "dependencies": {
+    "aply": "^0.7.0",
+    "execd": "^0.2.0",
+    "falzy": "^0.20.0",
+    "mrkd": "^0.6.0",
+    "protype": "^0.22.0",
+    "shft": "^0.2.0",
+    "zelf": "^0.12.0"
+  }
+}
