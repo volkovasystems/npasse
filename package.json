@@ -1,6 +1,6 @@
 {
   "name": "npasse",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Call passable callback.",
   "main": "npasse.js",
   "support": "npasse.support.js",
@@ -23,7 +23,7 @@
   "author": "Richeve S. Bebedor",
   "contributors": [
     "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon"
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {
@@ -33,9 +33,9 @@
   "dependencies": {
     "aply": "^0.8.0",
     "babel-runtime": "^6.23.0",
-    "execd": "^0.3.0",
+    "execd": "^0.4.0",
     "falzy": "^0.20.0",
-    "mrkd": "^0.7.0",
+    "mrkd": "^0.8.0",
     "protype": "^0.22.0",
     "shft": "^0.2.0",
     "zelf": "^0.12.0"
@@ -46,6 +46,6 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "source-map-loader": "^0.2.1",
-    "webpack": "^2.6.1"
+    "webpack": "^3.0.0"
   }
 }
