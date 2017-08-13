@@ -53,7 +53,6 @@
 			"execd": "execd",
 			"falzy": "falzy",
 			"mrkd": "mrkd",
-			"protype": "protype",
 			"shft": "shft",
 			"zelf": "zelf"
 		}
@@ -64,7 +63,6 @@ const aply = require( "aply" );
 const execd = require( "execd" );
 const falzy = require( "falzy" );
 const mrkd = require( "mrkd" );
-const protype = require( "protype" );
 const shft = require( "shft" );
 const zelf = require( "zelf" );
 
@@ -83,7 +81,7 @@ const npasse = function npasse( callback, context, parameter ){
 	*/
 
 	if( falzy( callback ) ||
-		!protype( callback, FUNCTION ) ||
+		typeof callback != "function" ||
 		!mrkd( CALLED_ONCE, callback, true ) )
 	{
 		throw new Error( "invalid callback" );

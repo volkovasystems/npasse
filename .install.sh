@@ -4,7 +4,6 @@ aply \
 execd \
 falzy \
 mrkd \
-protype \
 shft \
 zelf \
 --save && \
@@ -21,7 +20,6 @@ aply \
 execd \
 falzy \
 mrkd \
-protype \
 shft \
 zelf \
 --save \

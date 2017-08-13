@@ -53,7 +53,6 @@
                                                                                                                                                                                                                 			"execd": "execd",
                                                                                                                                                                                                                 			"falzy": "falzy",
                                                                                                                                                                                                                 			"mrkd": "mrkd",
-                                                                                                                                                                                                                			"protype": "protype",
                                                                                                                                                                                                                 			"shft": "shft",
                                                                                                                                                                                                                 			"zelf": "zelf"
                                                                                                                                                                                                                 		}
@@ -64,7 +63,6 @@ var aply = require("aply");
 var execd = require("execd");
 var falzy = require("falzy");
 var mrkd = require("mrkd");
-var protype = require("protype");
 var shft = require("shft");
 var zelf = require("zelf");
 
@@ -83,7 +81,7 @@ var npasse = function npasse(callback, context, parameter) {
                                                             */
 
 	if (falzy(callback) ||
-	!protype(callback, FUNCTION) ||
+	typeof callback != "function" ||
 	!mrkd(CALLED_ONCE, callback, true))
 	{
 		throw new Error("invalid callback");
