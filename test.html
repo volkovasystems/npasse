@@ -1,48 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>npasse unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:npasse</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./npasse.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "npasse unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				let CALLED_ONCE = Symbol( "called-once" );
-				let PASSABLE = Symbol( "passable" );
-				let callback = function callback( ){
-					assert.deepEqual( this, { "hello": "world" }, "should be equal to { 'hello': 'world' }" );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-					assert.deepEqual( Array.from( arguments ), [ null, "hello", 1, 2, 3 ], "should be equal to [ null, 'hello', 1, 2, 3 ]" );
-				};
-
-				callback.passed = function passed( ){
-					callback.apply( this, Array.from( arguments ) );
-
-					assert.deepEqual( this, { "hello": "world" }, "should be equal to { 'hello': 'world' }" );
-
-					assert.deepEqual( Array.from( arguments ), [ null, "hello", 1, 2, 3 ], "should be equal to [ null, 'hello', 1, 2, 3 ]" );
-
-					console.log( "ok" );
-				};
-
-				callback[ CALLED_ONCE ] = CALLED_ONCE;
-
-				callback[ PASSABLE ] = PASSABLE;
-
-				npasse( callback, { "hello": "world" }, null, "hello", 1, 2, 3 );
-				
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>

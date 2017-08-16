@@ -1,35 +1,27 @@
 {
-  "name": "npasse",
-  "version": "0.3.0",
-  "description": "Call passable callback.",
-  "main": "npasse.deploy.js",
-  "support": "npasse.support.js",
-  "authors": [
-    "Richeve S. Bebedor",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "call",
-    "passable",
-    "callback",
-    "npasse"
-  ],
-  "homepage": "https://github.com/volkovasystems/npasse",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "aply": "^0.9.0",
-    "execd": "^0.5.0",
-    "falzy": "^0.23.0",
-    "mrkd": "^0.11.0",
-    "shft": "^0.5.0",
-    "zelf": "^0.14.0"
-  }
+	"name": "npasse",
+	"version": "0.3.0",
+	"description": "Call passable callback.",
+	"main": "npasse.deploy.js",
+	"support": "npasse.support.js",
+	"authors": [
+		"Richeve S. Bebedor",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"call",
+		"passable",
+		"callback",
+		"npasse"
+	],
+	"homepage": "https://github.com/volkovasystems/npasse",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
