@@ -1,16 +1,32 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-16T12:57:14.037Z",
-    "end": "2017-08-16T12:57:14.038Z",
-    "duration": 1
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 2,
+		"tests": 1,
+		"passes": 1,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-09-06T07:24:17.211Z",
+		"end": "2017-09-06T07:24:17.223Z",
+		"duration": 12
+	},
+	"tests": [
+		{
+			"title": "should call passable callback",
+			"fullTitle": "npasse `npasse with callback, context, and parameter` should call passable callback",
+			"duration": 8,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should call passable callback",
+			"fullTitle": "npasse `npasse with callback, context, and parameter` should call passable callback",
+			"duration": 8,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

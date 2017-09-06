@@ -55,6 +55,7 @@ const assert = require( "should" );
 
 //: @server:
 const npasse = require( "./npasse.js" );
+const mrkd = require( "mrkd" );
 //: @end-server
 
 //: @client:
@@ -67,25 +68,110 @@ const path = require( "path" );
 
 
 //: @server:
-
 describe( "npasse", ( ) => {
 
-} );
+	describe( "`npasse with callback, context, and parameter`", ( ) => {
+		it( "should call passable callback", ( ) => {
 
+			let CALLED_ONCE = Symbol( "called-once" );
+			let PASSABLE = Symbol( "passable" );
+			let callback = function callback( ){
+				assert.deepEqual( this, { "hello": "world" }, "should be equal to { 'hello': 'world' }" );
+
+				assert.deepEqual( Array.from( arguments ), [ null, "hello", 1, 2, 3 ] );
+			};
+
+			callback.passed = function passed( ){
+				callback.apply( this, Array.from( arguments ) );
+
+				assert.deepEqual( this, { "hello": "world" } );
+
+				assert.deepEqual( Array.from( arguments ), [ null, "hello", 1, 2, 3 ] );
+
+			};
+
+			callback[ CALLED_ONCE ] = CALLED_ONCE;
+
+			callback[ PASSABLE ] = PASSABLE;
+
+			npasse( callback, { "hello": "world" }, null, "hello", 1, 2, 3 );
+
+		} );
+	} );
+
+} );
 //: @end-server
 
 
 //: @client:
-
 describe( "npasse", ( ) => {
-} );
 
+	describe( "`npasse with callback, context, and parameter`", ( ) => {
+		it( "should call passable callback", ( ) => {
+
+			let CALLED_ONCE = Symbol( "called-once" );
+			let PASSABLE = Symbol( "passable" );
+			let callback = function callback( ){
+				assert.deepEqual( this, { "hello": "world" }, "should be equal to { 'hello': 'world' }" );
+
+				assert.deepEqual( Array.from( arguments ), [ null, "hello", 1, 2, 3 ], "should be equal to [ null, 'hello', 1, 2, 3 ]" );
+			};
+
+			callback.passed = function passed( ){
+				callback.apply( this, Array.from( arguments ) );
+
+				assert.deepEqual( this, { "hello": "world" }, "should be equal to { 'hello': 'world' }" );
+
+				assert.deepEqual( Array.from( arguments ), [ null, "hello", 1, 2, 3 ], "should be equal to [ null, 'hello', 1, 2, 3 ]" );
+
+			};
+
+			callback[ CALLED_ONCE ] = CALLED_ONCE;
+
+			callback[ PASSABLE ] = PASSABLE;
+
+			npasse( callback, { "hello": "world" }, null, "hello", 1, 2, 3 );
+
+		} );
+	} );
+
+} );
 //: @end-client
 
 
 //: @bridge:
-
 describe( "npasse", ( ) => {
-} );
 
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`npasse with callback, context, and parameter`", ( ) => {
+		it( "should call passable callback", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let CALLED_ONCE = Symbol( "called-once" );
+					let PASSABLE = Symbol( "passable" );
+					let callback = function callback( ){ };
+
+					callback.passed = function passed( ){
+						callback.apply( this, Array.from( arguments ) );
+					};
+
+					callback[ CALLED_ONCE ] = CALLED_ONCE;
+
+					callback[ PASSABLE ] = PASSABLE;
+
+					npasse( callback, { "hello": "world" }, null, "hello", 1, 2, 3 );
+
+					return mrkd( CALLED_ONCE, callback );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.equal( result, true );
+		} );
+	} );
+
+} );
 //: @end-bridge

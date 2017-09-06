@@ -1,0 +1,84 @@
+{
+	"state": {
+		"passed": 1,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-06T07:24:18.396Z",
+	"end": "2017-09-06T07:24:27.273Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "npasse",
+			"duration": 0,
+			"start": "2017-09-06T07:24:22.738Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "npasse",
+			"duration": 4354,
+			"start": "2017-09-06T07:24:22.739Z",
+			"end": "2017-09-06T07:24:27.093Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-06T07:24:22.740Z",
+					"end": "2017-09-06T07:24:22.741Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "npasse",
+					"associatedTest": "should call passable callback"
+				},
+				{
+					"start": "2017-09-06T07:24:27.091Z",
+					"end": "2017-09-06T07:24:27.092Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "npasse",
+					"associatedTest": "should call passable callback"
+				},
+				{
+					"start": "2017-09-06T07:24:27.093Z",
+					"end": "2017-09-06T07:24:27.093Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "npasse"
+				}
+			]
+		},
+		{
+			"name": "`npasse with callback, context, and parameter`",
+			"duration": 4353,
+			"start": "2017-09-06T07:24:22.739Z",
+			"end": "2017-09-06T07:24:27.092Z",
+			"tests": [
+				{
+					"name": "should call passable callback",
+					"start": "2017-09-06T07:24:22.740Z",
+					"end": "2017-09-06T07:24:27.091Z",
+					"duration": 4351,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
