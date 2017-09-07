@@ -114,15 +114,15 @@ describe( "npasse", ( ) => {
 			let callback = function callback( ){
 				assert.deepEqual( this, { "hello": "world" }, "should be equal to { 'hello': 'world' }" );
 
-				assert.deepEqual( Array.from( arguments ), [ null, "hello", 1, 2, 3 ], "should be equal to [ null, 'hello', 1, 2, 3 ]" );
+				assert.deepEqual( Array.from( arguments ), [ null, "hello", 1, 2, 3 ] );
 			};
 
 			callback.passed = function passed( ){
 				callback.apply( this, Array.from( arguments ) );
 
-				assert.deepEqual( this, { "hello": "world" }, "should be equal to { 'hello': 'world' }" );
+				assert.deepEqual( this, { "hello": "world" } );
 
-				assert.deepEqual( Array.from( arguments ), [ null, "hello", 1, 2, 3 ], "should be equal to [ null, 'hello', 1, 2, 3 ]" );
+				assert.deepEqual( Array.from( arguments ), [ null, "hello", 1, 2, 3 ] );
 
 			};
 
