@@ -51,7 +51,7 @@
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const npasse = require( "./npasse.js" );

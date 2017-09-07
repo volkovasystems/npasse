@@ -5,15 +5,15 @@
 		"passes": 1,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-09-06T07:24:17.211Z",
-		"end": "2017-09-06T07:24:17.223Z",
-		"duration": 12
+		"start": "2017-09-07T05:49:22.589Z",
+		"end": "2017-09-07T05:49:22.600Z",
+		"duration": 11
 	},
 	"tests": [
 		{
 			"title": "should call passable callback",
 			"fullTitle": "npasse `npasse with callback, context, and parameter` should call passable callback",
-			"duration": 8,
+			"duration": 7,
 			"currentRetry": 0,
 			"err": {}
 		}
@@ -24,7 +24,7 @@
 		{
 			"title": "should call passable callback",
 			"fullTitle": "npasse `npasse with callback, context, and parameter` should call passable callback",
-			"duration": 8,
+			"duration": 7,
 			"currentRetry": 0,
 			"err": {}
 		}
